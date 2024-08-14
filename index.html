@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600;700;900&display=swap" rel="stylesheet">
+    <link href="dist/output.css" rel="stylesheet">
+    
+    <script>
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+        } else {
+            document.documentElement.classList.remove('dark')
+        };
+    </script>
+    <style>
+        #home{
+            position: relative;
+        }
+       #home{
+        width: 100%;
+        height: 640px;
+        background-image: url('dist/img/jabal1.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+     
+        
+       }
+       .container-home::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(219, 219, 219, 0.6);
+       }
+      .home-main{
+        z-index: 2;
+      }
+    
+    </style>
+</head>
+
+<body>
+
+    <!-- header start -->
+    <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
+        <div class="container">
+            <div class="flex items-center justify-between relative">
+                <div class="px-4">
+                    <a href="#home" class="font-bold text-lg text-secondary block py-6">Jabal Qur'an</a>
+                </div>
+                <div class="flex items-center px-4">
+                    <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-top-left"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out"></span>
+                        <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
+                    </button>
+                    <nav id="nav-menu"
+                        class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none dark:bg-slate-800 dark:shadow-slate-600 lg:dark:bg-transparent">
+                        <ul class="blok lg:flex">
+                            <li class="group">
+                                <a href="#home"
+                                    class="text-base py-2 mx-8 flex text-slate-700 group-hover:text-primary dark:text-white">Home</a>
+                            </li>
+                            <li class="group">
+                                <a href="#about"
+                                    class="text-base py-2 mx-8 flex text-slate-700 group-hover:text-primary dark:text-white">About</a>
+                            </li>
+
+                            <li class="group">
+                                <a href="#profil"
+                                    class="text-base py-2 mx-8 flex text-slate-700 group-hover:text-primary dark:text-white">Profil</a>
+                            </li>
+
+                            <li class="group">
+                                <a href="#galery"
+                                    class="text-base py-2 mx-8 flex text-slate-700 group-hover:text-primary dark:text-white">Galery</a>
+                            </li>
+                            <li class="group">
+                                <a href="#contact"
+                                    class="text-base py-2 mx-8 flex text-slate-700 group-hover:text-primary dark:text-white">Contact</a>
+                            </li>
+                            
+                            <li class=" mt-3 lg:mt-0 flex items-center pl-8">
+                                <div class="flex">
+                                    <span class="mr-2 text-sm text-slate-500">light</span>
+                                    <input type="checkbox" class="hidden" id="dark-toggle">
+                                    <label for="dark-toggle">
+                                        <div
+                                            class="flex h-5 w-9 cursor-pointer items-center rounded-full bg-slate-500 p-1">
+                                            <div
+                                                class="toggle-circle h-4 w-4 rounded-full bg-white transition duration-500 ease-in-out">
+                                            </div>
+                                        </div>
+                                    </label>
+                                    <span class="ml-2 text-sm text-slate-500">dark</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header end -->
+
+    <!-- hero section start -->
+    <section id="home" class="pt-36 pb-16 h-screen overflow-hidden" >
+        <div class="container container-home ">
+            <div class="flex flex-wrap h-96  md:text-center">
+                <div class="w-full self-center px-4 home-main ">
+                    <h1 class="text-base font-semibold text-primary md:text-2xl ">Pondok Pesantren<span
+                            class="block font-bold text-slate-00 text-4xl sm:text-2xl mt-1 lg:text-5xl 
+                            md:text-3xl text-slate-700 "> Jabal Qur'an</span></h1>
+                    <h2 class="font-medium text-slate-500 text-lg  lg:text-2xl md:mt-2">Pondok<span
+                            class="text-blue-700 dark:text-white">Tahfidz</span></h2>
+                    <P class="font-medium text-slate-700 mb-10 leading-relaxed">Mari menjadi generasi <span class=" text-slate-900"> Qur'ani</span></P>
+                    <a href="#about"
+                        class="text-base font-semibold text-white bg-primary py-3 px-8 rounded-full hover:opacity-80 transition duration-300 ease-in-out">Get more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+  
+    
+   
+    <!-- about section start -->
+    <section id="about" class="pt-24 pb-32 dark:bg-slate-800 overflow-hidden">
+        <div class="container">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 mb-10 lg:w-1/2">
+                    <h4 class="font-bold text-primary uppercase text-lg mb-3 md:2xl">Sejarah Pondok</h4>
+                    <h2 class="font-bold text-slate-700  mb-5 max-w-md text-2xl md:text-3xl lg:text-4xl dark:text-white">Tentang jabal qur'an</h2>
+                    <div class="w-full md:flex">
+                        <div
+                        class="max-w-[150px] py-4 mx-4 grayscale opacity-60 transition duration-500 hover:grayscale-0 hover:opacity-100 lg:mx-6 xl:mx-8">
+                        <img src="dist/img/clients/jabal.png" alt="logo" /> <p class="text-sm text-slate-500 dark:text-slate-300 w-max-48">Logo PP. Jabal Qur'an</p>
+                    </div>
+                        <p class="font-medium text-base text-slate-500 max-w-xl lg:text-lg md:text-xl">Jabal Qur'an merupakan pondok pesantren tahfid, didirikan pada tahun  2020, oleh seorang kiai dari salah satu pondok di kabupaten situbondo. Dana dari pembangun pondok murni dari masyarakt dusun kalabengan </p>
+    
+                    </div>
+                   
+                </div>
+                
+                <div class="w-full px-4 lg:w-1/2">
+                    <h3 class="font-semibold text-slate-800 text-2xl mb-4 lg:text-3xl lg:pt-10 dark:text-white md:text-3xl">perkembangan</h3>
+                    <p class="font-medium text-base text-slate-500 mb-6 lg:text-lg md:text-xl">Dari tahun ke tahun pondok pesantren ini berkembangan dengan pesat, sudah mampu mewisudakan santri 30 juz. </p>
+                    <div class="flex items-center">
+                        <!-- link gmail-->
+                        <a href="mailto:jabalquran0@gmail.com" target="_blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img"  width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                        </a>
+                        <!-- link instagram -->
+                        <a href="https://www.instagram.com/jabalquran_?igsh=b3J6a3phdGE1cGhs" target="_blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Instagram</title>
+                                <path
+                                    d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                            </svg>
+                        </a>
+                        <!-- link facebook -->
+                        <a href="https://www.facebook.com/share/QEnyPEFvSg4uFgjQ/?mibextid=qi2Omg" target="_blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>Facebook</title>
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                        <!-- link wa -->
+                        <a href="https://wa.me/qr/EPYDFDH2IBVOC1" target="_blank"
+                            class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                            <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>WhatsApp</title>
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+         </div>
+            
+    </section>
+    
+
+    <!-- about section end -->
+
+    <!-- profil start -->
+    <section id="profil" class="pt-36 pb-32 bg-slate-800 dark:bg-slate-100 ">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="mx-auto text-center mb-16">
+                    <h2 class="font-semibold text-primary text-lg ">Profil</h2>
+                    <h3 class="font-bold text-white text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-slate-800"> Pengasuh dan Pengurus</h3>
+                    <p class="font-medium text-md text-slate-600">Berikut ini adalah biografi singkat dari pengasuh dan struktur pengurus PP. Tahfidz Jabal Qur'an</p>
+                  
+                </div>
+
+               
+                    <div class=" w-full grid gap-2 justify-items-center items-center md:grid-cols-2">
+                        <div class=" h-32 w-32 md:w-48 md:h-48 border-2 border-dashed border-slate-300 rounded-full overflow-hidden bg-slate-700 dark:border-slate-300 dark:bg-slate-500">
+                            <div class="w-full h-full bg-cover bg-center" style="background-image: url('dist/img/kh-ubbad.png');"></div>
+                        </div>
+                        <div class="bg-slate-700 w-full p-6 dark:bg-slate-500 ">
+                            <p class="font-sans dark:text-slate-900 text-slate-200 md:text-xl" >KH Ubbad Yamin Adalah pengasuh ketiga dari pondok pesantren Nurul Islam, beliau memperluas pesantrennya dibeberapa titik di jawa timur dan salah satunya di Desa Sumber Canting kabupaten bondowoso dengan nama pondok pesantren Jabal Qur'an
+            
+                            </p>
+                        </div>
+                        
+                    </div>
+                    <div class="text-center">
+                        <h2 class=" text-white text-2xl mb-4 sm:text-4xl lg:text-5xl dark:text-slate-800 mt-3">Struktur Kepengurusan</h2>
+                        <div class="grid  items-center mt-3 md:text-xl">
+                        
+                            <div class=" max-w-48 bg-slate-700 rounded-md flex justify-center items-center p-3 text-slate-200 dark:bg-slate-500 dark:text-slate-900"><p class="">Pj : Jumali</p></div>
+                            <div class="h-5 w-5 border-2 border-t-transparent border-l-transparent origin-center rotate-45 mx-auto dark:border-slate-700 dark:border-t-transparent dark:border-l-transparent"></div>
+
+                            <div class="mt-2  max-w-48 bg-slate-700 rounded-md flex justify-center items-center p-3 text-slate-200 dark:bg-slate-500 dark:text-slate-900"><p class="">Ketua : H. Safi'i</p></div>
+                            <div class="h-5 w-5 border-2 border-t-transparent border-l-transparent origin-center rotate-45 mx-auto dark:border-slate-700 dark:border-t-transparent dark:border-l-transparent"></div>
+
+                            <div class="mt-2  max-w-48 bg-slate-700 rounded-md flex justify-center items-center p-3 text-slate-200 dark:bg-slate-500 dark:text-slate-900 "><p class=""> Wakil Ketua : Hanjali</p></div>
+                            <div class="h-5 w-5 border-2 border-t-transparent border-l-transparent origin-center rotate-45 mx-auto dark:border-slate-700 dark:border-t-transparent dark:border-l-transparent "></div>
+
+                            <div class="mt-2  max-w-48 bg-slate-700 rounded-md flex justify-center items-center p-3 text-slate-200 dark:bg-slate-500 dark:text-slate-900"><p class="">Sekertaris : Syamsul, Juhari</p></div>
+                            <div class="h-5 w-5 border-2 border-t-transparent border-l-transparent origin-center rotate-45 mx-auto dark:border-slate-700 dark:border-t-transparent dark:border-l-transparent"></div>
+
+                            <div class="mt-2  max-w-48 bg-slate-700 rounded-md flex justify-center items-center p-3 text-slate-200 dark:bg-slate-500 dark:text-slate-900"><p class="">Bendahara : Suhdi, Faqih</p></div>
+                            <div class="h-5 w-5 border-2 border-t-transparent border-l-transparent origin-center rotate-45 mx-auto dark:border-slate-700 dark:border-t-transparent dark:border-l-transparent"></div>
+
+                            <div class="mt-2  max-w-48 bg-slate-700 rounded-md flex justify-center items-center p-3 text-slate-200 dark:bg-slate-500 dark:text-slate-900"><p class="">Penasehat : Ust. Aminullah</p></div>
+                            <div class="h-5 w-5 border-2 border-t-transparent border-l-transparent origin-center rotate-45 mx-auto dark:border-slate-700 dark:border-t-transparent dark:border-l-transparent"></div>
+
+                            <div class="mt-2  max-w-48 bg-slate-700 rounded-md flex justify-center items-center p-3 text-slate-200 dark:bg-slate-500 dark:text-slate-900"><p class="">Keamanan : Didik, Anis</p></div>
+                            
+
+                            
+                        </div>
+                    </div>
+                    
+                    
+             </div>
+        </div>
+    </section>
+    <!-- profil end -->
+
+    <!-- galery start -->
+    <section id="galery" class="pt-24 md:pt-16 pb-16 bg-slate-100 dark:bg-slate-700 ">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h2 class="font-semibold text-primary text-lg ">Galery</h2>
+                    <h3 class="font-bold text-slate-700 text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"> tempat dan kegiatan</h3>
+                    <p class="font-medium text-md text-slate-600 dark:text-slate-300">foto-foto tempat dan kegiatan santri di pondok pesantren jabal qur'an  </p>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4 ">
+                <div
+                class="h-15 bg-sky-600  aspect-[4/3] rounded-lg  overflow-hidden relative group  transition-all duration-500 md:col-start-2 md:row-start-1">
+                <div
+                class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all duration-500" style="background-image: url('dist/img/jabal1.jpg');">
+             </div>
+            </div>
+            <div class="h-15 text-center  aspect-[4/3] rounded-lg  overflow-hidden bg-slate-200 dark:bg-slate-600">
+                <h3 class="mt-1 text-2xl text-slate-600 mt-3 text-primary">Deksripsi</h3>
+                <p class="font-medium text-md text-slate-600 mt-1 dark:text-slate-300">Musholla santri buat sholat jamaah dan setor hafalan</p>
+            </div>
+            <div
+                class="h-15 bg-sky-600  aspect-[4/3] rounded-lg  overflow-hidden relative group  transition-all duration-500 md:col-start-1 md:row-start-2">
+                <div
+                class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all duration-500" style="background-image: url('dist/img/hafal.jpg');">
+             </div>
+            </div>
+            <div class="h-15 text-center aspect-[4/3] rounded-lg  overflow-hidden bg-slate-200  dark:bg-slate-600">
+                
+                <h3 class="mt-1 text-2xl text-primary mt-3">Deksripsi</h3>
+                <p class="font-medium text-md text-slate-600 dark:text-slate-300 mt-3">santri putri lagi menghafalkan qur'an</p>
+            </div>
+            <div
+                class="h-15 bg-sky-600  aspect-[4/3] rounded-lg  overflow-hidden relative group  transition-all duration-500 md:col-start-2 md:row-start-3">
+                <div
+                class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all duration-500" style="background-image: url('dist/img/setor.jpg');">
+             </div>
+            </div>
+            <div class="h-15 text-center aspect-[4/3] rounded-lg  overflow-hidden bg-slate-200  dark:bg-slate-600">
+                
+                <h3 class="mt-1 text-2xl text-primary mt-3">Deksripsi</h3>
+                <p class="font-medium text-md text-slate-600 mt-3 dark:text-slate-300">santri sedang menyetorkan hafalan kepada ustad yang tugaskan dari pondok pesantren Nurul Islam (pusat)</p>
+            </div>
+            <div
+                class="h-15 bg-sky-600  aspect-[4/3] rounded-lg  overflow-hidden relative group  transition-all duration-500 md:col-start-1 md:row-start-4">
+                <div
+                class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all duration-500" style="background-image: url('dist/img/wisuda.jpg');">
+             </div>
+            </div>
+            <div class="h-15 text-center aspect-[4/3] rounded-lg  overflow-hidden bg-slate-200  dark:bg-slate-600">
+                
+                <h3 class="mt-1 text-2xl text-primary mt-3">Deksripsi</h3>
+                <p class="font-medium text-md text-slate-600 mt-3 dark:text-slate-300">Acara wisuda rutinan setiap tahun biasanya di selenggarakan pada bulan maulid</p>
+            </div>
+            <div
+                class="h-15 bg-sky-600  aspect-[4/3] rounded-lg  overflow-hidden relative group  transition-all duration-500 md:col-start-2 md:row-start-5">
+                <div
+                class="w-full h-full bg-cover bg-center absolute group-hover:scale-125 transition-all duration-500" style="background-image: url('dist/img/asput.jpg');">
+             </div>
+            </div>
+            <div class="h-15 text-center aspect-[4/3] rounded-lg  overflow-hidden bg-slate-200  dark:bg-slate-600">
+                
+                <h3 class="mt-1 text-2xl text-primary mt-3">Deksripsi</h3>
+                <p class="font-medium text-md text-slate-600 mt-3 dark:text-slate-300">Asrama santri putra </p>
+            </div>
+            </div>
+        </div>
+    </section>
+    <!-- galery end -->
+
+    
+
+    <!-- section kontak -->
+    <section id="contact" class="pt-36 pb-32 bg-slate-100 dark:bg-slate-700 ">
+        <div class="container">
+            <div class="w-full px-4">
+                <div class="max-w-xl mx-auto text-center mb-16">
+                    <h2 class="font-semibold text-primary text-lg ">Kontak</h2>
+                    <h3 class="font-bold text-slate-700 text-3xl mb-4 sm:text-4xl lg:text-5xl dark:text-white"> Hubungi
+                        Kami</h3>
+                    <p class="font-medium text-md text-slate-600 dark:text-slate-300">Kirim pesan kepada pengurus kami jika ada pertanyaan tentang Pondok Pesantren Jabal Qur'an</p>
+                </div>
+            </div>
+           
+                <div class="w-full lg:w-2/3 lg:mx-auto">
+                    <a href="" class="w-max-48 bg-slate-200 rounded-md block flex justify-center items-center p-3 t hover:text-primary transition-all duration-300 hover:bg-slate-300 shadow-lg md:p-6 md:text-xl dark:bg-slate-400 dark:hover:bg-slate-800">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>WhatsApp</title>
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg> <span class="pl-4"> Bpk Suhdi </span>
+                    </a>
+                    <a href="" class="mt-6 w-max-48 bg-slate-200 rounded-md block flex justify-center items-center p-3 t hover:text-primary transition-all duration-300 hover:bg-slate-300 shadow-lg md:p-6 md:text-xl dark:bg-slate-400 dark:hover:bg-slate-800">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>WhatsApp</title>
+                                <path
+                                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                            </svg> <span class="pl-4"> Bpk Jumali </span>
+                    </a>
+                </div>
+        </div>
+    </section>
+    <!-- secttion en -->
+
+    <!-- footer start -->
+    <footer class="bg-slate-800 pt-24 pb-12 overflow-hidden">
+        <div class="contaner">
+            <div class="flex flex-wrap">
+                <div class="w-full px-4 pb-12 text-slate-300 font-medium md:w-1/3">
+                    <h2 class="font-bold md:text-3xl text-2xl text-white mb-4">PP. Jabal Qur'an</h2>
+                    <p class="font-bold text-xl md:text-2xl mb-2">faizaltanjung9@gmail.com</p>
+                    <p class="hover:text-primary">jl. Pancur No. 120</p>
+                    <p class="hover:text-primary">Ds Kelabengan, Desa Sumber Canting</p>
+                    <p class="hover:text-primary">Bondowoso</p>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white">Pusat</h3>
+                    <ul class="text-slate-300">
+                        <li><p class="inline-blok text-base hover:text-primary">Ponpes Nurul Islam</p>
+                        </li>
+                        <li><p class="inline-blok text-base hover:text-primary">Corasaleh</p></li>
+                        <li><p class="inline-blok text-base hover:text-primary">Situbondo</p></li>
+                    </ul>
+                </div>
+                <div class="w-full px-4 mb-12 md:w-1/3">
+                    <h3 class="font-semibold text-xl text-white">Tautan</h3>
+                    <ul class="text-slate-300">
+                        <li><a href="#home" class="inline-blok text-base hover:text-primary">Home</a></li>
+                        <li><a href="#about" class="inline-blok text-base hover:text-primary">About</a></li>
+                        <li><a href="#portfolio" class="inline-blok text-base hover:text-primary">Profil</a></li>
+                        <li><a href="#galery" class="inline-blok text-base hover:text-primary">Galery</a></li>
+                        <li><a href="#contact" class="inline-blok text-base hover:text-primary">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="w-full pt-10 border-t border-slate-700">
+                <div class="flex items-center justify-center mb-5">
+                    <!-- link gmil -->
+                    <a href="mailto:jabalquran0@gmail.com" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><title>Gmail</title><path d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 0 1 0 19.366V5.457c0-2.023 2.309-3.178 3.927-1.964L5.455 4.64 12 9.548l6.545-4.91 1.528-1.145C21.69 2.28 24 3.434 24 5.457z"/></svg>
+                    </a>
+                    <!-- link instagram -->
+                    <a href="https://www.instagram.com/jabalquran_?igsh=b3J6a3phdGE1cGhs" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Instagram</title>
+                            <path
+                                d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z" />
+                        </svg>
+                    </a>
+                    <!-- link facebook -->
+                    <a href="https://www.facebook.com/share/QEnyPEFvSg4uFgjQ/?mibextid=qi2Omg" target="_blank"
+                        class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
+                        <svg role="img" width="20" class="fill-current" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <title>Facebook</title>
+                            <path
+                                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                        </svg>
+                    </a>
+                   
+                </div>
+                <p class="font-medium text-slate-500 text-center">Terima Kasih telah mengunjungi Website <span class="font-bold text-sky-600">Jabal Qur'an</span>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- back to start -->
+    <a href="#home" class="w-14 h-14  fixed z-[9999] hidden  rounded-full bottom-5 right-5 group" id="to-top">
+        <span class="text-3xl justify-center items-center pt-2 pl-2 group-hover:animate-bounce">🔝</span>
+    </a>
+    <!-- end to start -->
+    <script src="dist/js/script.js"></script>
+
+
+</body>
+
+</html>
